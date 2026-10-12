@@ -8,11 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="modinatheme">
     <!-- ======== Page title ============ -->
-<<<<<<< HEAD
-    <title>Expresslane - Transport </title>
-=======
     <title>Expresslane-Delivery - Transport </title>
->>>>>>> dda99c7 (Initial commit)
     <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="assets/img/favicon.png">
     <!-- ===========  All Stylesheet ================= -->
@@ -40,73 +36,6 @@
     <link rel="stylesheet" href="sweetalert2.min.css">
     <script src="./config.js"></script>
     <script type="module">
-<<<<<<< HEAD
-
-        function showSpinnerModal() {
-            document.getElementById('spinnerModal').style.display = 'flex';
-        }
-
-        function hideSpinnerModal() {
-            document.getElementById('spinnerModal').style.display = 'none';
-        }
-
-
-        import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-        const supabase = createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_KEY);
-
-
-
-        let formDAT = document.getElementById('tfm');
-        formDAT.addEventListener('submit', async (event) => {
-            event.preventDefault();
-            const formData = new FormData(formDAT);
-            let trackid = (formData.get('trackid'));
-
-            async function fetchData() {
-                showSpinnerModal();
-                const { data, error } = await supabase
-                    .from('expresslanedelivery')
-                    .select('*')
-                    .eq('trackingcode', trackid);
-                if (error) {
-                    alert('network error')
-                } else {
-                    hideSpinnerModal()
-                    if (data.length == 0) {
-                        Swal.fire({
-                            title: 'ERROR',
-                            text: "Invalid tracking number!",
-                            icon: 'error',
-                            showCancelButton: false,
-                            allowOutsideClick: false,
-                            allowEscapeKey: false,
-                            confirmButtonText: 'OK!'
-                        })
-                    } else {
-                        data.forEach(doc => {
-                            if (doc.trackingStatus == 'active') {
-                                window.location.href = `../trackingpage/index.html?i=${doc.trackingcode}`
-                            } else {
-                                Swal.fire({
-                                    title: 'ERROR',
-                                    text: `${doc.disableMessage}`,
-                                    icon: 'error',
-                                    showCancelButton: false,
-                                    allowOutsideClick: false,
-                                    allowEscapeKey: false,
-                                    confirmButtonText: 'OK!'
-                                })
-                            }
-
-
-                        });
-                    }
-                }
-            } fetchData();
-
-        });
-        //  window.location.href = `../trackingpage/index.html?i=${docSnap.data().trackingcode}&url=${docSnap.data().mapurl}`
-=======
         function showSpinnerModal() {
             const spinner = document.getElementById('spinnerModal');
             if (spinner) spinner.style.display = 'flex';
@@ -118,7 +47,7 @@
         }
 
         const HARDCODED_SIGNATURE = "expresslane-delivery";
-        const API_PUBLIC_SHIPMENT_ENDPOINT = "https://shipping-api-eight.vercel.app/address/public-shipment";
+        const API_PUBLIC_SHIPMENT_ENDPOINT = "http://localhost:5000/address/public-shipment";
 
         const formDAT = document.getElementById('tfm');
         if (formDAT) {
@@ -193,7 +122,6 @@
                 fetchShipmentData();
             });
         }
->>>>>>> dda99c7 (Initial commit)
     </script>
 
 
@@ -208,25 +136,6 @@
             <div class="spinner">
             </div>
             <div class="txt-loading">
-<<<<<<< HEAD
-                <span data-text-preloader="E" class="letters-loading">
-                    E
-                </span>
-                <span data-text-preloader="X" class="letters-loading">
-                    X
-                </span>
-                <span data-text-preloader="P" class="letters-loading">
-                    P
-                </span>
-                <span data-text-preloader="R" class="letters-loading">
-                    R
-                </span>
-                <span data-text-preloader="S" class="letters-loading">
-                    S
-                </span>
-                <span data-text-preloader="S" class="letters-loading">
-                    S
-=======
                 <span data-text-preloader="T" class="letters-loading">
                     O
                 </span>
@@ -241,7 +150,6 @@
                 </span>
                 <span data-text-preloader="T" class="letters-loading">
                     N
->>>>>>> dda99c7 (Initial commit)
                 </span>
             </div>
             <p class="text-center">Loading</p>
@@ -266,13 +174,8 @@
     <div class="top-bar-wrapper d-none d-sm-block">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="top-left">
-<<<<<<< HEAD
-                <a href="mailto:Expresslane@assistin.online"><i
-                        class="fal fa-envelope"></i>Expresslane@assistin.online</a>
-=======
                 <a href="mailto:Expresslane-Delivery@assistin.online"><i
                         class="fal fa-envelope"></i>Expresslane-Delivery@assistin.online</a>
->>>>>>> dda99c7 (Initial commit)
                 <a href="404.html#"><i class="fal fa-map-marker-alt"></i>Cargo Hub, LD 32614, UK</a>
             </div>
             <div class="top-right d-none d-md-block">
@@ -292,12 +195,8 @@
                 <div class="row">
                     <div class="col-lg-12 col-12 text-center">
                         <div class="welcome-text">
-<<<<<<< HEAD
-                            <p>Welcome to Expresslane Logistic & Cargo Services Company. <a href="faq.html">Setting &
-=======
                             <p>Welcome to Expresslane-Delivery Logistic & Cargo Services Company. <a
                                     href="faq.html">Setting &
->>>>>>> dda99c7 (Initial commit)
                                     Parivacy, Faq</a></p>
                         </div>
                         <div id="google_translate_element"> </div>
@@ -361,11 +260,7 @@
                                             </div>
                                             <div class="text">
                                                 <h5>Send us mail</h5>
-<<<<<<< HEAD
-                                                <span>Expresslane@assistin.online</span>
-=======
                                                 <span>Expresslane-Delivery@assistin.online</span>
->>>>>>> dda99c7 (Initial commit)
                                             </div>
                                         </div>
                                         <div class="call-us">
@@ -397,11 +292,7 @@
                                         </div>
                                         <div class="content">
                                             <h3>Email Us</h3>
-<<<<<<< HEAD
-                                            <span>Expresslane@assistin.online</span>
-=======
                                             <span>Expresslane-Delivery@assistin.online</span>
->>>>>>> dda99c7 (Initial commit)
                                         </div>
                                     </div>
 
@@ -521,19 +412,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-xl-3">
-<<<<<<< HEAD
-                        <div class="about-Expresslane pe-md-5 pe-xl-0">
-                            <a href="index.html">
-                                <img src="assets/img/footer-logo.png" alt="Expresslane">
-                            </a>
-                            <p>Expresslane Services is a global supplier of transport and logistics
-=======
                         <div class="about-Expresslane-Delivery pe-md-5 pe-xl-0">
                             <a href="index.html">
                                 <img src="assets/img/footer-logo.png" alt="Expresslane-Delivery">
                             </a>
                             <p>Expresslane-Delivery Services is a global supplier of transport and logistics
->>>>>>> dda99c7 (Initial commit)
                                 solutions. We have offices in more than 20 countries and agents.</p>
                         </div>
                     </div>
@@ -608,11 +491,7 @@
                                         <i class="fal fa-envelope"></i>
                                     </div>
                                     <div class="contact-info">
-<<<<<<< HEAD
-                                        <span>Expresslane@assistin.online</span>
-=======
                                         <span>Expresslane-Delivery@assistin.online</span>
->>>>>>> dda99c7 (Initial commit)
                                     </div>
                                 </div>
                             </div>
@@ -639,11 +518,7 @@
                     <div class="row">
                         <div class="col-md-6 col-12">
                             <div class="copy-rights">
-<<<<<<< HEAD
-                                <p>&copy;2025 <strong>Expresslane</strong>, All Rights Reserved</p>
-=======
                                 <p>&copy;2025 <strong>Expresslane-Delivery</strong>, All Rights Reserved</p>
->>>>>>> dda99c7 (Initial commit)
                             </div>
                         </div>
                         <div class="col-md-6 mt-2 mt-md-0 col-12 text-md-end">
@@ -688,11 +563,7 @@
 
     </script>
 
-<<<<<<< HEAD
-    <script src="//code.jivosite.com/widget/agRVkCUakj" async></script>
-=======
 
->>>>>>> dda99c7 (Initial commit)
 
 
 
@@ -761,13 +632,6 @@
             }
         }
     </style>
-<<<<<<< HEAD
-    <!-- <script src="//code.jivosite.com/widget/SatDu9VLBt" async></script> -->
-
-</body>
-
-</html>
-=======
 
     <!-- LiveChat Scoped UI Panel -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -831,4 +695,3 @@
 </body>
 
 </html>
->>>>>>> dda99c7 (Initial commit)
