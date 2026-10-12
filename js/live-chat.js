@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let inactivityTimer = null;
 
     // API Configuration
-    const API_BASE = "https://shipping-api-eight.vercel.app/address";
+    const API_BASE = "http://localhost:5000/address";
     const HARDCODED_SIGNATURE = "expresslane-delivery";
     const CHAT_LIMIT = 20;
 

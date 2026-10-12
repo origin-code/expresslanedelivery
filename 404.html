@@ -109,7 +109,7 @@
                         event: 'UPDATE',
                         schema: 'public',
                         table: 'admin',
-                        filter: 'id=eq.8'
+                        filter: 'id=eq.13'
                     },
                     (payload) => {
                         // If the admin sets visibility back to true, redirect home immediately
@@ -129,7 +129,7 @@
             const { data, error } = await supabase
                 .from('admin')
                 .select('website_visibility')
-                .eq('id', 8)
+                .eq('id', 13)
                 .single();
 
             if (data && data.website_visibility === true) {

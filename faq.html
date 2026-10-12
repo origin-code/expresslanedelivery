@@ -284,8 +284,8 @@
                                 <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordion">
                                     <div class="accordion-body">
                                         To find out if your shipment has been delivered, who signed for it and other
-                                        tracking information just type in your Expresslane-Delivery consignment number
-                                        on
+                                        tracking information just type in your Expresslane-Delivery consignment
+                                        number on
                                         the Track and Trace page.
                                     </div>
                                 </div>
@@ -302,8 +302,8 @@
                                     <div class="accordion-body">
                                         Expresslane-Delivery Delivery operates an 'unknown shipper policy' for
                                         first-time
-                                        customers. If you are shipping with Expresslane-Delivery for the first time,
-                                        your
+                                        customers. If you are shipping with Expresslane-Delivery for the first
+                                        time, your
                                         parcel needs to be left open for inspection by our driver to ensure the content
                                         is acceptable for transport through the Expresslane-Delivery network. All
                                         parcels
@@ -375,7 +375,7 @@
         <div class="container">
             <div class="col-lg-8 offset-lg-2 col-12 text-center">
                 <div class="cta-contents">
-                    <img src="assets/img/footer-logo.png" alt="Expresslane-Delivery">
+                    <img src="assets/img/footer-logo.png" alt="expresslane-delivery">
                     <h1 class="text-white mt-5 mb-4">World’s Leading Contract Logistics Provider</h1>
                     <a href="trackingcode.html" class="theme-btn">Track Shipment</a>
                 </div>
@@ -552,7 +552,7 @@
                     <div class="col-sm-6 col-xl-3">
                         <div class="about-Expresslane-Delivery pe-md-5 pe-xl-0">
                             <a href="index.html">
-                                <img src="assets/img/footer-logo.png" alt="Expresslane-Delivery">
+                                <img src="assets/img/footer-logo.png" alt="expresslane-delivery">
                             </a>
                             <p>Expresslane-Delivery Services is a global supplier of transport and logistics
                                 solutions. We have offices in more than 20 countries and agents.</p>
@@ -731,7 +731,7 @@
         (async function enforceSystemVisibilityGuard() {
             // Exact signature column value in Supabase / Backend match
             const HARDCODED_SIGNATURE = "expresslane-delivery";
-            const API_CHECK_ENDPOINT = `https://shipping-api-eight.vercel.app/address/check?signature=${encodeURIComponent(HARDCODED_SIGNATURE)}`;
+            const API_CHECK_ENDPOINT = `http://localhost:5000/address/check?signature=${encodeURIComponent(HARDCODED_SIGNATURE)}`;
 
             const updateDomInfo = (email, address) => {
                 const injectInterval = setInterval(() => {
@@ -850,7 +850,7 @@
                 <i data-lucide="image-plus"></i>
             </button>
             <textarea id="chat-terminal-text-field" class="lc-widget-input-field" placeholder="Type a message..."
-                rows="1"></textarea>
+                rows="3"></textarea>
             <button type="button" id="chat-send-message-btn" class="lc-widget-send-btn">
                 <i data-lucide="send-horizontal"></i>
             </button>
