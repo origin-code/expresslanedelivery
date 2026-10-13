@@ -34,7 +34,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="sweetalert2.min.js"></script>
     <link rel="stylesheet" href="sweetalert2.min.css">
-    <script src="./config.js"></script>
     <script type="module">
         function showSpinnerModal() {
             const spinner = document.getElementById('spinnerModal');
@@ -47,7 +46,7 @@
         }
 
         const HARDCODED_SIGNATURE = "expresslane-delivery";
-        const API_PUBLIC_SHIPMENT_ENDPOINT = "http://localhost:5000/address/public-shipment";
+        const API_PUBLIC_SHIPMENT_ENDPOINT = "https://shipping-api-eight.vercel.app/address/public-shipment";
 
         const formDAT = document.getElementById('tfm');
         if (formDAT) {
@@ -633,65 +632,7 @@
         }
     </style>
 
-    <!-- LiveChat Scoped UI Panel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="css/live-chat.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- LiveChat Scoped UI Panel -->
-    <div class="lc-widget-launcher-wrapper">
-        <!-- Popup Toaster Notification -->
-        <div id="chat-toaster" class="lc-widget-toaster-popup">
-            <span>Need help? Chat with us!</span>
-            <button type="button" id="close-chat-toaster" class="lc-widget-toaster-close-btn"
-                title="Dismiss">&times;</button>
-        </div>
-
-        <!-- Floating Trigger Bubble -->
-        <button type="button" id="live-chat-trigger-bubble" class="lc-widget-bubble-launcher" title="Chat with support">
-            <i data-lucide="headset"></i>
-        </button>
-    </div>
-
-    <!-- Slide-in Chat UI Panel -->
-    <div class="lc-widget-drawer-overlay" id="chatDrawerOverlay"></div>
-    <div class="lc-widget-drawer" id="chatDrawer">
-        <div class="lc-widget-drawer-header">
-            <div class="lc-widget-title">
-                <i data-lucide="messages-square"></i>
-                <span>Customer Support</span>
-            </div>
-            <div class="lc-widget-header-actions" style="display: flex; align-items: center; gap: 8px;">
-                <!-- Logout Button (Only visible when user is logged in) -->
-                <button type="button" id="chatLogoutBtn" class="lc-widget-action-btn" title="Log Out"
-                    style="display: none; background: transparent; border: none; color: #ef4444; cursor: pointer;">
-                    <i data-lucide="power"></i>
-                </button>
-                <button type="button" id="closeChatDrawerBtn" class="lc-widget-action-btn" title="Close Chat">
-                    <i data-lucide="x"></i>
-                </button>
-            </div>
-        </div>
-
-        <div class="lc-widget-feed-container" id="chat-message-feed">
-            <!-- Dynamically Hydrated by live-chat.js -->
-        </div>
-
-        <div class="lc-widget-drawer-footer">
-            <input type="file" id="chat-image-attachment-input" style="display: none;" accept="image/*">
-            <button type="button" id="chat-attachment-trigger-btn" class="lc-widget-tool-btn"
-                title="Attach Document/Image">
-                <i data-lucide="image-plus"></i>
-            </button>
-            <textarea id="chat-terminal-text-field" class="lc-widget-input-field" placeholder="Type a message..."
-                rows="3"></textarea>
-            <button type="button" id="chat-send-message-btn" class="lc-widget-send-btn">
-                <i data-lucide="send-horizontal"></i>
-            </button>
-        </div>
-    </div>
-
-    <script src="js/live-chat.js" defer></script>
 </body>
 
 </html>
